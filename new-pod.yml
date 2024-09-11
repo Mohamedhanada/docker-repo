@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod 
+metadata:
+  name: new-pod
+  labels:
+    app: new-pod
+    owner: mohamed
+    enviornment: test
+    release: test
+    image: inginx
+
+spec:  
+  containers:
+    - name: nginx-app  
+      image: nginx:1.27-perl
+      ports:
+        - containerPort: 80
